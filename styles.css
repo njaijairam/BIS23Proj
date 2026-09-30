@@ -16,3 +16,20 @@ h1, h2, p {
   text-align: center;
   font-family: 'Trebuchet MS', sans-serif;
 }
+
+/* Footer styling */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #0044cc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

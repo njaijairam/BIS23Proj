@@ -1,11 +1,18 @@
-/* Sets the background color and default font for the entire page */
 body {
   background-color: lightblue;
   font-family: Arial, sans-serif;
 }
 
-/* Centers all headings and applies a different font */
-h1, h2 {
+.container {
+  background-color: #d3d3d3; /* Gray background for the box */
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+/* Centers text and applies fonts to headings and paragraphs */
+h1, h2, p {
   text-align: center;
   font-family: 'Trebuchet MS', sans-serif;
 }

@@ -22,6 +22,22 @@
         <a href="#goals">Goals</a>
       </p>
     </footer>
+
+  <script>
+    document.addEventListener('mousemove', (e) => {
+      const particle = document.createElement('div');
+      particle.className = 'trail-particle';
+      
+      particle.style.left = e.clientX + 'px';
+      particle.style.top = e.clientY + 'px';
+      
+      document.body.appendChild(particle);
+
+      setTimeout(() => {
+        particle.remove();
+      }, 500);
+    });
+  </script>
   </div>
 </body>
 </html>

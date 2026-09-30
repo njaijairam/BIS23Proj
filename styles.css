@@ -37,8 +37,8 @@ footer a:hover {
 /* Red Glow Trail Particles */
 .trail-particle {
   position: fixed;
-  width: 6px;                
-  height: 6px;               
+  width: 4px;                
+  height: 4px;               
   background-color: #ff0000;
   border-radius: 50%;
   pointer-events: none;

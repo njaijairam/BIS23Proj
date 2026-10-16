@@ -126,3 +126,10 @@ footer a:hover {
     transform: translate(-50%, -50%) scale(0.1);
   }
 }
+
+@media screen and (max-width: 480px) {
+  .sidenav {
+    width: 0; /* Stays hidden initially */
+  }
+  /* mobile viewport */
+}

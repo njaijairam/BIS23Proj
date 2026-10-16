@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nicholas Jaijairam - Projects</title>
+  <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+  <img src="NJlogo.jpg" alt="NJ Logo" style="display: block; margin: 0 auto 20px auto; width: 120px; border-radius: 12px;">
+
+  <!-- Hamburger Toggle Button -->
+  <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
+
+  <!-- Side Navigation Menu -->
+  <div id="sideNav" class="sidenav">
+    <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="goals.html">Goals</a>
+    <a href="projects.html">Projects</a>
+  </div>
+
+  <!-- Background Overlay -->
+  <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+  
+  <div class="container">
+    <h1>My Projects</h1>
+
+    
+  </div>
+
+  <footer>
+      <p>&copy; 2012 Nicholas Jaijairam. All Rights Reserved.</p>
+      <p>
+        <a href="about.html">About</a> | 
+        <a href="goals.html">Goals</a> | 
+        <a href="projects.html">Projects</a>
+      </p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("sideNav");
+      const overlay = document.getElementById("overlay");
+      const menuWidth = window.innerWidth <= 480 ? "100%" : "250px";
+      
+      if (nav.style.width === menuWidth) {
+        nav.style.width = "0";
+        overlay.classList.remove("active");
+      } else {
+        nav.style.width = menuWidth;
+        overlay.classList.add("active");
+      }
+    }
+    
+    document.addEventListener('mousemove', (e) => {
+      const particle = document.createElement('div');
+      particle.className = 'trail-particle';
+      
+      particle.style.left = e.clientX + 'px';
+      particle.style.top = e.clientY + 'px';
+      
+      document.body.appendChild(particle);
+
+      setTimeout(() => {
+        particle.remove();
+      }, 300);
+    });
+  </script>
+</body>
+</html>

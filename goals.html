@@ -38,6 +38,19 @@
     </footer>
 
   <script>
+    function toggleMenu() {
+      const nav = document.getElementById("sideNav");
+      const overlay = document.getElementById("overlay");
+      
+      if (nav.style.width === "250px") {
+        nav.style.width = "0";
+        overlay.classList.remove("active");
+      } else {
+        nav.style.width = "250px";
+        overlay.classList.add("active");
+      }
+    }
+    
     document.addEventListener('mousemove', (e) => {
       const particle = document.createElement('div');
       particle.className = 'trail-particle';

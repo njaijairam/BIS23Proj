@@ -6,6 +6,21 @@
 </head>
   <img src="NJlogo.jpg" alt="NJ Logo" style="display: block; margin: 0 auto 20px auto; width: 120px; border-radius: 12px;">
 <body>
+
+  <!-- Hamburger Toggle Button -->
+  <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
+
+  <!-- Side Navigation Menu -->
+  <div id="sideNav" class="sidenav">
+    <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="goals.html">Goals</a>
+  </div>
+
+  <!-- Background Overlay -->
+  <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+  
   <div class="container">
     <h1>Nicholas Jaijairam</h1>
 

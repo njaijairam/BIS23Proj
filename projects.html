@@ -25,24 +25,28 @@
   <div class="container">
     <h1>My Projects</h1>
 
-    <h2 style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-      <img src="calculator.png" alt="Calculator" style="width: 32px; height: 32px; object-fit: contain;"> 
-      MPG Calculator
-    </h2>
+    <h2>MPG Calculator</h2>
     <p>Calculate your vehicle's miles per gallon efficiency below.</p>
 
-    <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px; text-align: left;">
-      <div style="display: flex; flex-direction: column;">
-        <label for="milesTraveled" style="font-weight: bold; margin-bottom: 5px; font-family: 'Trebuchet MS', sans-serif;">Miles Traveled:</label>
-        <input type="number" id="milesTraveled" placeholder="e.g. 300" step="any" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 16px;">
-      </div>
+    <!-- Side-by-side layout with larger calculator image on the left -->
+    <div style="display: flex; gap: 20px; align-items: center; margin-top: 20px;">
+      <img src="calculator.png" alt="Calculator" style="width: 110px; height: auto; object-fit: contain; border-radius: 8px; flex-shrink: 0;">
 
-      <div style="display: flex; flex-direction: column;">
-        <label for="gallonsOfGas" style="font-weight: bold; margin-bottom: 5px; font-family: 'Trebuchet MS', sans-serif;">Gallons Used:</label>
-        <input type="number" id="gallonsOfGas" placeholder="e.g. 10" step="any" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 16px;">
-      </div>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 15px; text-align: left;">
+        <div style="display: flex; flex-direction: column;">
+          <label for="milesTraveled" style="font-weight: bold; margin-bottom: 5px; font-family: 'Trebuchet MS', sans-serif;">Miles Traveled:</label>
+          <input type="number" id="milesTraveled" placeholder="e.g. 300" step="any" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 16px;">
+        </div>
 
-      <button onclick="calculateMPG()" style="background-color: #000; color: #fff; border: none; padding: 12px; font-size: 16px; border-radius: 5px; cursor: pointer; transition: background 0.3s;">Calculate MPG</button>
+        <div style="display: flex; flex-direction: column;">
+          <label for="gallonsOfGas" style="font-weight: bold; margin-bottom: 5px; font-family: 'Trebuchet MS', sans-serif;">Gallons Used:</label>
+          <input type="number" id="gallonsOfGas" placeholder="e.g. 10" step="any" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 16px;">
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 20px;">
+      <button onclick="calculateMPG()" style="background-color: #000; color: #fff; border: none; padding: 12px; font-size: 16px; border-radius: 5px; cursor: pointer; width: 100%; transition: background 0.3s;">Calculate MPG</button>
     </div>
 
     <div id="result" style="margin-top: 20px; font-size: 20px; font-weight: bold; color: #0044cc; text-align: center;"></div>

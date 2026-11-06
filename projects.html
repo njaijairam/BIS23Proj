@@ -25,7 +25,24 @@
   <div class="container">
     <h1>My Projects</h1>
 
-    
+    <h2>🚗 MPG Calculator</h2>
+    <p>Calculate your vehicle's miles per gallon efficiency below.</p>
+
+    <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px; text-align: left;">
+      <div style="display: flex; flex-direction: column;">
+        <label for="milesTraveled" style="font-weight: bold; margin-bottom: 5px; font-family: 'Trebuchet MS', sans-serif;">Miles Traveled:</label>
+        <input type="number" id="milesTraveled" placeholder="e.g. 300" step="any" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 16px;">
+      </div>
+
+      <div style="display: flex; flex-direction: column;">
+        <label for="gallonsOfGas" style="font-weight: bold; margin-bottom: 5px; font-family: 'Trebuchet MS', sans-serif;">Gallons Used:</label>
+        <input type="number" id="gallonsOfGas" placeholder="e.g. 10" step="any" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 16px;">
+      </div>
+
+      <button onclick="calculateMPG()" style="background-color: #000; color: #fff; border: none; padding: 12px; font-size: 16px; border-radius: 5px; cursor: pointer; transition: background 0.3s;">Calculate MPG</button>
+    </div>
+
+    <div id="result" style="margin-top: 20px; font-size: 20px; font-weight: bold; color: #0044cc; text-align: center;"></div>
   </div>
 
   <footer>
@@ -65,6 +82,23 @@
         particle.remove();
       }, 300);
     });
+
+    function calculateMPG() {
+      const miles = parseFloat(document.getElementById('milesTraveled').value);
+      const gallons = parseFloat(document.getElementById('gallonsOfGas').value);
+      const resultDiv = document.getElementById('result');
+
+      if (isNaN(miles) || isNaN(gallons) || gallons <= 0 || miles < 0) {
+        resultDiv.style.color = 'red';
+        resultDiv.innerText = "Please enter valid positive numbers.";
+        return;
+      }
+
+      const milesPerGallon = miles / gallons;
+
+      resultDiv.style.color = '#0044cc';
+      resultDiv.innerText = `Result: ${milesPerGallon.toFixed(2)} MPG`;
+    }
   </script>
 </body>
 </html>
